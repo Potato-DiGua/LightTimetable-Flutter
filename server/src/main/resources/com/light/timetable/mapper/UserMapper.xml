@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.light.timetable.mapper.UserMapper">
+
+    <select id="getUser" parameterType="string" resultType="user">
+
+        select id, username, password, icon
+        from light_timetable.user_table
+        where `account` = #{account};
+
+    </select>
+
+    <select id="getUserById" parameterType="int" resultType="user">
+
+        select id, username, password, account, icon
+        from light_timetable.user_table
+        where `id` = #{id};
+
+    </select>
+
+    <insert id="registerUser" parameterType="user">
+        insert into light_timetable.user_table (account, username, password)
+        VALUES (#{account}, #{userName}, #{password});
+    </insert>
+
+    <update id="updateIconById">
+        update light_timetable.user_table
+        set icon = #{icon}
+        where id = #{id}
+    </update>
+
+    <select id="getIconById" resultType="String">
+        select icon
+        from light_timetable.user_table
+        where id = #{id}
+    </select>
+</mapper>

@@ -1,0 +1,22 @@
+PODS:
+  - add_calendar_event (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - add_calendar_event (from `.symlinks/plugins/add_calendar_event/ios`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  add_calendar_event:
+    :path: ".symlinks/plugins/add_calendar_event/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  add_calendar_event: 609e2fb136f9a7b5b9b831060d3cfcf0ae79593f
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+
+PODFILE CHECKSUM: a75497545d4391e2d394c3668e20cfb1c2bbd4aa
+
+COCOAPODS: 1.10.1
